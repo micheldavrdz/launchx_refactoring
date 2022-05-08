@@ -38,14 +38,14 @@ describe("Unit test for FizzbuzzService class", () => {
         expect(FizzbuzzService.applyValidationInExplorer(explorer4).trick).toBe('FIZZBUZZ');
     });
 
-    test("Test case 4 - Check if FizzbuzzService returns explorer score if the value isn't a multiple of 3, 5 or 3 AND 5", () => {
+    test("Test case  - Check if FizzbuzzService returns explorer score if the value isn't a multiple of 3, 5 or 3 AND 5", () => {
         const explorer1 = { name: 'Explorer 1', score: 3 };   
         const explorer2 = { name: 'Explorer 2', score: 4 };
         const explorer3 = { name: 'Explorer 3', score: 5 };
         const explorer4 = { name: 'Explorer 4', score: 15 };
 
         expect(FizzbuzzService.applyValidationInExplorer(explorer1).trick).not.toBe(4);
-        expect(FizzbuzzService.applyValidationInExplorer(explorer2).trick).not.toBe(4);
+        expect(FizzbuzzService.applyValidationInExplorer(explorer2).trick).toBe(4);
         expect(FizzbuzzService.applyValidationInExplorer(explorer3).trick).not.toBe(4);
         expect(FizzbuzzService.applyValidationInExplorer(explorer4).trick).not.toBe(4);
     });
