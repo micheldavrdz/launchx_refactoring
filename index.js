@@ -1,5 +1,5 @@
-const Reader = require('./libs/utils/Reader');
-const ExplorerService = require('./libs/services/ExplorerService');
+const Reader = require('./lib/utils/Reader');
+const ExplorerService = require('./lib/services/ExplorerService');
 
 // Get the explorers data from the file
 const explorers = Reader.readJsonfile('./explorers.json');
