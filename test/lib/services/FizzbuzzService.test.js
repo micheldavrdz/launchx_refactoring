@@ -45,7 +45,7 @@ describe("Unit test for FizzbuzzService class", () => {
         const explorer4 = { name: 'Explorer 4', score: 15 };
 
         expect(FizzbuzzService.applyValidationInExplorer(explorer1).trick).not.toBe(4);
-        expect(FizzbuzzService.applyValidationInExplorer(explorer2).trick).toBe(4);
+        expect(FizzbuzzService.applyValidationInExplorer(explorer2).trick).not.toBe(4);
         expect(FizzbuzzService.applyValidationInExplorer(explorer3).trick).not.toBe(4);
         expect(FizzbuzzService.applyValidationInExplorer(explorer4).trick).not.toBe(4);
     });
