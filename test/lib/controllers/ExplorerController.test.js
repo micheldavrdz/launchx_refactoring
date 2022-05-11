@@ -9,6 +9,14 @@ describe('Unit test for ExplorerController class', () => {
         expect(ExplorerController.getExplorersByMission('python')).toStrictEqual([]);
     });
 
+    test('Test case 2 - Filter explorers by mission and get their names', () => {
+        expect(ExplorerController.getExplorersNameByMission('node')).toBeDefined();
+        expect(ExplorerController.getExplorersNameByMission('node')).not.toBeNull();
+        expect(ExplorerController.getExplorersNameByMission('java')).toBeDefined();
+        expect(ExplorerController.getExplorersNameByMission('java')).not.toBeNull();
+        expect(ExplorerController.getExplorersNameByMission('python')).toStrictEqual([]);
+    });
+
     test('Test case 2 - Filter explorers by mission and get their total amount', () => {
         expect(ExplorerController.getExplorersAmountByMission('node')).toBeDefined();
         expect(ExplorerController.getExplorersAmountByMission('node')).toBe(10);

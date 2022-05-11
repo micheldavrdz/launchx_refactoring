@@ -9,7 +9,7 @@ describe('Unit test for ExplorerService class', () => {
         expect(explorersFiltered.length).toBe(10);
     });
 
-    test('Test case 1 - Filter explorers names in node mission', () => {
+    test('Test case 1 - Filter explorers names in node mission and get their names', () => {
         const explorers = Reader.readJsonfile('explorers.json');
         const explorersFiltered = ExplorerService.getExplorersNamesInMission(explorers, 'node');
 
